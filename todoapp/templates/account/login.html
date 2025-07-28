@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load socialaccount %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h3 class="card-title mb-0">Login</h3>
+            </div>
+            <div class="card-body">
+                <form method="POST" action="{% url 'account_login' %}">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    {% if redirect_field_value %}
+                        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                    {% endif %}
+                    <button class="btn btn-primary w-100 mt-3" type="submit">Login</button>
+                </form>
+                
+                <div class="text-center mt-3">
+                    <a href="{% url 'account_reset_password' %}">Forgot Password?</a>
+                </div>
+                
+                <hr>
+                
+                <div class="text-center">
+                    <p>Or login with:</p>
+                    <a href="{% provider_login_url 'google' %}" class="btn btn-outline-danger">
+                        <i class="bi bi-google"></i> Google
+                    </a>
+                </div>
+            </div>
+            <div class="card-footer text-center">
+                Don't have an account? <a href="{% url 'account_signup' %}">Sign up</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
