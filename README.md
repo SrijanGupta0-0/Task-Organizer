@@ -85,10 +85,3 @@ Built during Django Bootcamp at Cimage College | [2025]
 4. **Mobile-Friendly**: Responsive design mentioned
 5. **Professional Structure**: Clear sections for features/installation
 
-**To customize**:
-1. Replace `yourusername` in GitHub URL
-2. Add actual screenshots in `/screenshots` folder
-3. Update license/year info
-4. Include your `requirements.txt` file
-
-Would you like me to add deployment instructions for platforms like Heroku or Railway?
