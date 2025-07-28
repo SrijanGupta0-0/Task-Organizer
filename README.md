@@ -1,4 +1,4 @@
-# 🚀 Django To-Do App with User Authentication
+# 🚀 Task-Organizer with User Authentication
 
 ![Django](https://img.shields.io/badge/Django-092E20?logo=django&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
